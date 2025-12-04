@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    
+    <header class="top-bar">
+        <div class="settings">
+      <label class="switch">
+        <input type="checkbox" id="soundToggle" checked>
+        <span class="slider"></span>
+      </label>      
+    </div> 
+      <button id="themeToggle" class="theme-btn">
+    🔘
+      </button>
+</header>
+
+<main class="app">
+
+  <h1 class="title">Tic Tac Toe</h1>
+
+  <!-- TOP INFO -->
+  <section class="info-bar">
+    <div class="turn-indicator">
+      Turn: <span id="currentTurn">⭕</span>
+    </div>
+
+    <div class="score-board">
+      <span>⭕ <b id="scoreO">0</b></span>
+      <span>❌ <b id="scoreX">0</b></span>
+    </div>
+  </section>
+
+  <!-- GAME BOARD -->
+  <section class="board-wrapper">
+    <section class="board" id="board">
+      <button class="cell"></button>
+      <button class="cell"></button>
+      <button class="cell"></button>
+      <button class="cell"></button>
+      <button class="cell"></button>
+      <button class="cell"></button>
+      <button class="cell"></button>
+      <button class="cell"></button>
+      <button class="cell"></button>
+    </section>
+
+    <!-- WIN / DRAW OVERLAY -->
+    <div class="overlay hide" id="overlay">
+      <h2 id="overlayTitle">Winner!</h2>
+      <p id="overlayMsg">⭕ wins the game</p>
+      <button id="playAgain" class="primary-btn">Play Again</button>
+    </div>
+  </section>
+
+  <!-- CONTROLS -->
+  <section class="controls">
+    <button id="resetGame" class="secondary-btn">Reset Board</button>
+    <button id="resetScore" class="secondary-btn">Reset Score</button>   
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
