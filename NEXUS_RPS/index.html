@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS RPS | Premium Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>NEXUS RPS</h1>
+            <p class="subtitle">Premium Rock Paper Scissors</p>
+        </header>
+
+        <main>
+            <div class="score-board">
+                <div class="score">
+                    <div class="score-label">Player</div>
+                    <div class="score-value player-score" id="playerScore">0</div>
+                </div>
+                <div class="vs">VS</div>
+                <div class="score">
+                    <div class="score-label">CPU</div>
+                    <div class="score-value cpu-score" id="cpuScore">0</div>
+                </div>
+            </div>
+
+            <div class="game-area">
+                <div class="player-side">
+                    <div class="side-label">Your Choice</div>
+                    <div class="choice-display player-choice" id="playerChoiceDisplay">
+                        <i class="fas fa-question"></i>
+                    </div>
+                </div>
+
+                <div class="vs-circle">VS</div>
+
+                <div class="cpu-side">
+                    <div class="side-label">CPU Choice</div>
+                    <div class="choice-display cpu-choice" id="cpuChoiceDisplay">
+                        <i class="fas fa-question"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="choice-selection">
+                <button class="choice-btn rock" data-choice="rock">
+                    <i class="fas fa-fist-raised"></i>
+                </button>
+                <button class="choice-btn paper" data-choice="paper">
+                    <i class="fas fa-hand-paper"></i>
+                </button>
+                <button class="choice-btn scissors" data-choice="scissors">
+                    <i class="fas fa-hand-scissors"></i>
+                </button>
+            </div>
+
+            <div class="result-panel">
+                <div class="result-text" id="resultText">Make your move to begin</div>
+                <div class="streak-counter" id="streakCounter">Current streak: <span>0</span></div>
+            </div>
+
+            <div class="controls">
+                <button class="control-btn reset-btn" id="resetBtn">
+                    <i class="fas fa-redo"></i> <span class="btn-text">Reset Game</span>
+                </button>
+                <button class="control-btn sound-btn on" id="soundBtn">
+                    <i class="fas fa-volume-up sound-on"></i>
+                    <i class="fas fa-volume-mute sound-off"></i> <span class="btn-text">Sound On</span>
+                </button>
+            </div>
+        </main>
+
+        <footer>
+            <p>NEXUS RPS • A premium Rock Paper Scissors experience</p>
+            <p class="footer-sub">CPU uses adaptive logic for challenging gameplay</p>
+        </footer>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
